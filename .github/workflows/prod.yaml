@@ -16,7 +16,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          version: 10
+          version: 9.15.1
           run_install: false
 
       - name: Install Node.js
@@ -24,9 +24,6 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
-
-      - name: Install dependencies
-        run: pnpm install
 
       - name: Deploy
         run: |

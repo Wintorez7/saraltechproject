@@ -28,12 +28,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-#      - name: Setup Wrangler
-#        run: pnpm install
-
       - name: Deploy
         run: |
-#          pnpm run db:migrate:prod
           pnpm run pages:deploy
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}

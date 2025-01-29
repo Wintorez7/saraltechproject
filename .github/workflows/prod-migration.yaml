@@ -32,12 +32,11 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Deploy
+      - name: Run Migrations
         run: |
           cp wrangler.toml.example wrangler.toml
           pnpm db:migrate:prod
         env:
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          CF_USER_API_TOKEN: ${{ secrets.CF_USER_API_TOKEN }}
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_USER_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           DB_REMOTE_DATABASE_ID: ${{ secrets.DB_REMOTE_DATABASE_ID }}

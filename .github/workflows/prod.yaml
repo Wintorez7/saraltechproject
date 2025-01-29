@@ -30,7 +30,8 @@ jobs:
 
       - name: Deploy
         run: |
-          pnpm pages:build && pnpm wrangler pages deploy --project-name=${{ secrets.CF_PROJECT_NAME }}
+          cp wrangler.toml.example wrangler.toml
+          pnpm pages:build && pnpm wrangler pages deploy
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_USER_API_TOKEN: ${{ secrets.CF_USER_API_TOKEN }}

@@ -34,7 +34,6 @@ jobs:
 
       - name: Run Migrations
         run: |
-          cp wrangler.toml.example wrangler.toml
           pnpm db:migrate:prod
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

@@ -30,7 +30,7 @@ jobs:
 
       - name: Deploy
         run: |
-          pnpm pages:build && pnpm wrangler pages deploy
+          pnpm pages:build && pnpm wrangler pages deploy --project-name=${{ secrets.CF_PROJECT_NAME }}
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_USER_API_TOKEN: ${{ secrets.CF_USER_API_TOKEN }}

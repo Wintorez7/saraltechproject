@@ -17,18 +17,20 @@
 pnpm install
 ```
 
+3. Update .env file and wrangler.toml file.
+
 4. Generate db migration files (that documents schema changes in an SQL script).
 
 ```sh
 pnpm db:generate
 ```
 
-4. Run db migrations (that executes the SQL script to update the database to match the schema).
+5. Run db migrations (that executes the SQL script to update the database to match the schema).
 
 - dev (local) db: `pnpm db:migrate:dev`
 - prod (remote) db: `pnpm db:migrate:prod`
 
-5. View the database using a graphical user interface:
+6. View the database using a graphical user interface:
 
 - dev (local) db: `pnpm db:studio:dev`
 - prod (remote) db: `pnpm db:studio:prod`

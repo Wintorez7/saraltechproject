@@ -9,7 +9,12 @@
 
 ## Initialise the database(s)
 
-1. [Create a production D1 database.](https://developers.cloudflare.com/d1/get-started/#3-create-a-database)
+1. Create D1 Database, Cloudflare API Token.
+
+   [Create a production D1 database.](https://developers.cloudflare.com/d1/get-started/#3-create-a-database)
+   [Create a cloudflare API Token.](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/)
+   
+   ![img.png](img.png)
 
 2. Install the app's dependencies:
 

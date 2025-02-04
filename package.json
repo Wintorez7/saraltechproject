@@ -9,15 +9,15 @@
     "db:migrate:prod": "wrangler d1 migrations apply template-cloudflare-d1 --remote",
     "db:studio:dev": "cross-env DB_LOCAL_PATH=$(find .wrangler/state/v3/d1/miniflare-D1DatabaseObject -type f -name '*.sqlite' -print -quit) drizzle-kit studio --port 3094",
     "db:studio:prod": "drizzle-kit studio --port 3098",
-    "build": "next build",
+    "build": "next build && pnpm pages:build",
     "dev": "next dev",
-    "pages:build": "pnpm next-on-pages",
+    "pages:build": "npx @cloudflare/next-on-pages",
     "pages:dev": "pnpm pages:build && pnpm wrangler pages dev --port=3000",
     "pages:deploy": "pnpm pages:build && pnpm wrangler pages deploy"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.62.10",
-    "next": "14.2.21",
+    "next": "^14.2.21",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "server-only": "^0.0.1",

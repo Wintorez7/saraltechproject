@@ -1,15 +1,15 @@
 # Your wrangler.toml file should look something like this:
-name = "template-cloudflare-d1"
+name = "saral-transport"
 compatibility_date = "2024-11-11"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
-    
+
 # WARNING: When running a production build locally using Wrangler, be aware that the .env file may be omitted. Therefore, ensure that you have the same environment variables in your wrangler.toml file.
 # However, you don't have to include Drizzle environment unless you want to access `drizzle-kit` commands in the deployed code.
 [vars]
 
 [[d1_databases]]
 binding = "DB" # i.e. available in your Worker on env.DB
-database_name = "saraltech-project-db" # When you create your D1 DB, you choose the name
-database_id = "87826a0c-d097-4479-8063-5d7ee6a474f6"
-preview_database_id = "87826a0c-d097-4479-8063-5d7ee6a474f6"
+database_name = "saral-transport" # When you create your D1 DB, you choose the name
+database_id = "ab09ff21-ebba-42e8-93e7-d841b5f348d4"
+preview_database_id = "ab09ff21-ebba-42e8-93e7-d841b5f348d4"

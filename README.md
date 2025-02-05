@@ -22,7 +22,7 @@
 pnpm install
 ```
 
-3. Create .env file by copying from .env.example. And update .env file and wrangler.toml file.
+3. Create .env file by copying from .env.example. And update project name, database name, etc in .env, and wrangler.toml file.
 
 4. Generate db migration files (that documents schema changes in an SQL script).
 

@@ -11,5 +11,5 @@ pages_build_output_dir = ".vercel/output/static"
 [[d1_databases]]
 binding = "DB" # i.e. available in your Worker on env.DB
 database_name = "saral-transport" # When you create your D1 DB, you choose the name
-database_id = "ab09ff21-ebba-42e8-93e7-d841b5f348d4"
-preview_database_id = "ab09ff21-ebba-42e8-93e7-d841b5f348d4"
+database_id = "6409b7ad-0656-469c-840c-03d73ddbec20"
+preview_database_id = "6409b7ad-0656-469c-840c-03d73ddbec20"

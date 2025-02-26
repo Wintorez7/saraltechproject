@@ -1,5 +1,5 @@
 # Your wrangler.toml file should look something like this:
-name = "saraltech-project"
+name = "ticketbookingsystem"
 compatibility_date = "2024-11-11"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
@@ -11,5 +11,5 @@ pages_build_output_dir = ".vercel/output/static"
 [[d1_databases]]
 binding = "DB" # i.e. available in your Worker on env.DB
 database_name = "saral-transport" # When you create your D1 DB, you choose the name
-database_id = "6409b7ad-0656-469c-840c-03d73ddbec20"
-preview_database_id = "6409b7ad-0656-469c-840c-03d73ddbec20"
+database_id = "d1c46159-cb0e-43aa-8957-496c96b52895"
+preview_database_id = "d1c46159-cb0e-43aa-8957-496c96b52895"

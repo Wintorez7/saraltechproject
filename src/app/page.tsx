@@ -13,22 +13,8 @@ export default async function Home() {
   // const customers = (await response.json()).result; // <-- you will have to work with types quite a bit
 
   return (
-    <div>
-      <p>Your customer IDs</p>
-      <ul>
-        {customers.map((customer) => (
-          <li key={customer.customerId}>{customer.customerId}</li>
-        ))}
-        <li>
-          <form action={createCustomerWithCustomId}>
-            <input type="text" name="customerId" placeholder="add a new customer ID"></input>
-            <button type="submit" className="border-2 border-red-500 p-1">
-              submit
-            </button>
-          </form>
-        </li>
-      </ul>
-      <p>end</p>
-    </div>
+    <section>
+      Main Content  
+    </section>
   );
 }

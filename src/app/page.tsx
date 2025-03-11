@@ -1,3 +1,10 @@
+import { CTASection } from '@/components/cta-section';
+import { FeaturedServices } from '@/components/featured-services';
+import { Footer } from '@/components/footer';
+import { HeroSection } from '@/components/hero-section';
+import { Navbar } from '@/components/navbar';
+import { PopularDestinations } from '@/components/popular-destinations';
+import { Testimonials } from '@/components/testimonials';
 import { createCustomerWithCustomId, getCustomers } from '@/server/functions/customers';
 
 export const runtime = 'edge';
@@ -13,8 +20,14 @@ export default async function Home() {
   // const customers = (await response.json()).result; // <-- you will have to work with types quite a bit
 
   return (
-    <section>
-      Main Content  
-    </section>
+    <main className="min-h-screen flex flex-col">
+        <Navbar />
+        <HeroSection />
+        <FeaturedServices />
+        <PopularDestinations />
+        <Testimonials/>
+        <CTASection/>
+        <Footer/>
+    </main>
   );
 }

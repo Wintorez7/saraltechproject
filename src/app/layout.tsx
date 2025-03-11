@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { Suspense } from 'react';
-import Loading from './loading';
-import { CommonLayout } from '../components/common-layout/index';
+import { ThemeProvider } from '@/components/ui/theme-provider';
+import { Toaster } from "sonner";
+
 
 const inter = Inter({ subsets: ['latin'] });
+
 
 export const metadata: Metadata = {
   title: 'Your Project Name',
@@ -18,11 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Suspense fallback={<Loading />}>
-          <CommonLayout>{children}</CommonLayout>
-        </Suspense>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
